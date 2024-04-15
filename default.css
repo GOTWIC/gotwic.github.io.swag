@@ -1045,3 +1045,36 @@ a.no-decoration {
 ::-webkit-scrollbar-thumb:hover {
     background: #3a2f40; 
 }
+
+
+
+.gold-shine {
+    color: white;
+    background: linear-gradient(to right, white 20%, rgba(250, 227, 100, 0.6) 50%,white 80%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 15s infinite linear;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@keyframes shine {
+    0%{
+        background-position: -540px;
+    }
+    50% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 130px;
+    }
+}
+
+
+
+
+  
+    
