@@ -714,21 +714,6 @@ p:last-child {
     font-weight: bold;
 }
 
-.feed-list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.feed-list, .page-list {
-    display: block;
-}
-
-.feed-list > li {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
-    margin-bottom: 0.2em;
-}
 
 #left-date, #right-date {
     font-size: 0.81em;
@@ -1014,7 +999,8 @@ a.no-decoration {
     white-space: nowrap; 
     font-size: 15px;
     color: white;
-    padding: 5px;
+    padding: 4px;
+    z-index: 2000;
 }
 
 .full-width-img {
@@ -1075,6 +1061,77 @@ a.no-decoration {
 
 
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hide the sidebar completely offscreen */
+    width: 50%; /* Sidebar will take up 40% of the screen width */
+    height: 100%;
+    background-color: var(--background);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.7s ease;
+    padding: 5rem; /* Padding around the content */
+    padding-left: 8rem; /* Extra space on the left side */
+    overflow-y: auto; /* Scrollable content */
+    z-index: 1000;
+    display: none; /* Hide it completely when not active */
+}
 
+.sidebar.active {
+    right: 0; /* Slide the sidebar into view */
+    display: block; /* Ensure it's visible when active */
+}
+
+/* Optional: You can adjust text or element padding inside the sidebar for better spacing */
+.sidebar h2,
+.sidebar p {
+    margin: 1rem 1rem 1rem 0; /* Add spacing between paragraphs and headings */
+}
+
+/* Adjust the content to make space when the sidebar is active */
+body.sidebar-active main {
+    margin-right: 50px;
+    transition: margin-right 0.1s ease;
+}
+
+.sidebar h1 {
+    font-size: 4rem; /* Increase this value to make the h1 text bigger */
+    font-weight: bold; /* Optional: adjust font weight if needed */
+    line-height: 1.2; /* Optional: adjust line spacing */
+}
+
+.sidebar p {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem; 
+    line-height: 1.6;
+}
+
+.feed-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feed-list, .page-list {
+    display: block;
+}
+
+.feed-list > li {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Keep the date auto-sized, let the blog title take remaining space */
+    align-items: baseline;
+    margin-bottom: 0.2em;
+    column-gap: 10px; /* Add some space between the date and blog title */
+}
+
+#left-date {
+    white-space: nowrap; /* Prevent the date from wrapping */
+}
+
+.blog-link {
+    white-space: nowrap; /* Prevent the blog title from wrapping */
+    overflow: hidden; /* Prevent overflow if the title is too long */
+    text-overflow: ellipsis; /* Optional: Add ellipsis for long titles */
+}
   
     

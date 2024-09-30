@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-us" >
-  
+<html lang="en-us">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,41 +17,85 @@
     <meta name="application-name" content="Swagnik Roychoudhury">
     <meta name="msapplication-TileColor" content="#fbf8f4">
     <meta name="theme-color" content="#fbf8f4">
-        
+
     <link rel="stylesheet" href="../normalize.css" />
     <link rel="stylesheet" href="../default.css" />
 
-    
-  </head>
+</head>
 
-  
-  <body>
+<body>
     <header id="site-header">
-  <h1 id="site-title"><a href="../about/" class="padded">Swagnik Roychoudhury</a></h1>
-  <h1 id="site-title-small"><a href="../about/" class="padded">S.R</a></h1>
-  <nav class="header-links sans" style="font-weight: 500;">
-    <a href="../about/" class="padded">About</a>
-    <a href="../research/" class="padded">Research</a>
-    <a href="" class="padded">Blog</a>
-    <!-- <a href="../other/" class="padded">Other</a> -->
-  </nav>
-</header>
-    <main role="main">
-      
-  <article>
-    <header>
-      <h1>Blog</h1>
+        <h1 id="site-title"><a href="../about/" class="padded">Swagnik Roychoudhury</a></h1>
+        <h1 id="site-title-small"><a href="../about/" class="padded">S.R</a></h1>
+        <nav class="header-links sans" style="font-weight: 500;">
+            <a href="../about/" class="padded">About</a>
+            <a href="../research/" class="padded">Research</a>
+            <a href="#" id="blog-link" class="padded">Blog</a>
+        </nav>
     </header>
-    <section>
-        <ul class="feed-list">
-          <li><span id="left-date">---- -- --</span> <span><a href="">COMING SOON</a></span> </li>
-        </ul>
-    </section>
-  </article>
 
+    <main role="main">
+        <article>
+            <header>
+                <h1>Blog</h1>
+            </header>
+            <section>
+                <ul class="feed-list">
+                    <li><span id="left-date">2024-09-15</span> <span><a href="#" class="blog-link" data-blog="2">Catching Cyclical Citations</a></span></li>
+                    <li><span id="left-date">2024-07-26</span> <span><a href="#" class="blog-link" data-blog="1">Hacking Warframe's Servers</a></span></li>
+                    <!-- <li><span id="left-date">____-__-__</span> <span><a href="#" class="blog-link" data-blog="3">COMING SOON</a></span></li> -->
+                </ul>
+            </section>
+        </article>
     </main>
+
+    <!-- Sidebar for Blog 1 -->
+    <aside id="sidebar-1" class="sidebar">
+        <h1>Hacking into Warframe's Communication Servers</h1>
+        <p> 
+          Warframe is a free-to-play space-themed third-person shooter developed by Digital Extremes, with millions of players across the globe. 
+          Not only is the game one of the most popular games ever created - consistently being in the top 30 active players for the past decade - but also my most played game.
+        </p>
+        <p>
+          Back when I used to code for fun, I'd often write c++ scripts to create tools for various things in my life such as music and chess, and Warframe was no exception.
+          The habit persisted and eventually my suite of tools grew into excel damage calculators, java script discord bots, and python scripts for in-game image processing.
+        </p>
+        <p>
+          Thus it comes to no surprise that when I heard a rumor a few months ago that there was a vulnerability in Warframe's authentication process, I was instantly intruiged.
+          Access into Warframe's communication server would allow for the creation of trading bot faster than any other bot on the market. 
+          In the past few years, multiple bots have been developed by various players (including me), but lack of internal access has made the bots limited and laggy.
+        </p>
+        <p>
+          Such an exploit would not affect gameplay, nor 99.99% of the player base. 
+          However, a bot with instant access to the server would provide a handful of players a trading edge over the ~200 or so players that trade high value items (often worth thousands of dollars) on a daily basis.
+        </p>
+        <p>
+          Unfortunately, the only person who knew about the vulnerability was a supposed 17-year old Russian hacker by the name Redlim, who was unwilling to share the details with anyone. 
+          This was expected as he was making a fortune charging $100/month for access to his bot.
+        </p>
+
+        <p>[THIS ARTICLE IS IN PROGRESS]</p>
+        <p> </p>
+    </aside>
+
+    <!-- Sidebar for Blog 2 -->
+    <aside id="sidebar-2" class="sidebar">
+        <h1>Catching Cyclical Citations</h1>
+        <p>[THIS ARTICLE IS UNDER CONSTRUCTION]</p>
+    </aside>
+
+    <!-- Sidebar for Blog 3 
+    <aside id="sidebar-3" class="sidebar">
+      <h1>COMING SOON</h1>
+      <p></p>
+    </aside>  -->
+
     <div class="rotated-text-container">
         <p>Made with <span class="heart">❤</span> by Swagnik Roychoudhury</p>
     </div>
-  </body>
+
+    <!-- Include external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
 </html>
